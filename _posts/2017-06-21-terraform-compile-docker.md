@@ -1,6 +1,31 @@
-
-
 I am going to show you the way to compile Terraform by Hashicorp from source code using Docker. By using Docker, we save time since we do not need to install golang and we don't have to setup the development environment. So save time and hit the hay.
+
+| layout | title | date | categories | comments | crosspost\_to\_medium |
+| --- | --- | --- | --- | --- | --- |
+| 
+post
+
+ | 
+
+How to Compile Hashicorp Terraform using Docker
+
+ | 
+
+2017-06-21 13:40:02 -0400
+
+ | 
+
+iac provisioning hashicorp terraform
+
+ | 
+
+true
+
+ | 
+
+true
+
+ |
 
 In some cases you will need to use Terraform from `master` branch or test a feature under development, Whether you are collaborating with the project, or just requiring a fix or feature that is in a pull request.
 
@@ -11,7 +36,7 @@ Then, let's go to the point, there are only two commands:
     ~/git
     ❯ git clone git@github.com:hashicorp/terraform.git
     
-
+    
     ~/git/terraform master
     ❯ docker run --rm -v $(pwd):/go/src/github.com/hashicorp/terraform -w /go/src/github.com/hashicorp/terraform -e XC_OS=linux -e XC_ARCH=amd64 golang:latest bash -c "apt-get update && apt-get install -y zip && make bin"
     
