@@ -19,11 +19,12 @@ My recommendation is to prepare `Dockerfile` that inherits from the official Jen
     git clone git@github.com:waltervargas/jenkins.git
     ```
 
+2. Run
 
-    2. Run
-       ```sh
+    ```sh
     cd jenkins
     docker-compose up
+    ```
 
 3.  Go to <http://localhost:8080/>
 
