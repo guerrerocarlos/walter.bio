@@ -3,13 +3,13 @@ layout: post
 title: "Local Jenkins inside Docker for Development"
 date: 2017-06-11 22:58:47 -0400
 categories: jenkins docker development devops ci/cd
-comments: true 
+comments: false 
 ---
 
 
 Is helpful to run your own Jenkins instance to test your jobs and pipelines. Docker and docker-compose make this task doable in a few of steps.
 
-My recommendation is to prepare `Dockerfile` that inherits from the official Jenkins docker image, and customize the packages and jenkins plugins that you want to use.
+My recommendation is to prepare `Dockerfile` that inherits from the official Jenkins docker image, and customize the packages and _jenkins_ plugins that you want to use.
 
 ## Clone and Run
 
@@ -19,7 +19,7 @@ My recommendation is to prepare `Dockerfile` that inherits from the official Jen
     git clone git@github.com:waltervargas/jenkins.git
     ```
 
-2. Run
+2.  Run
 
     ```sh
     cd jenkins
@@ -28,7 +28,7 @@ My recommendation is to prepare `Dockerfile` that inherits from the official Jen
 
 3.  Go to <http://localhost:8080/>
 
-## References
+## _References_
 
 Check out the [Official Jenkins Docker Image](https://github.com/jenkinsci/docker#official-jenkins-docker-image) documentation for more info on how to get the most out of Jenkins in Docker.
 
@@ -39,3 +39,5 @@ File all bugs/feature requests at [waltervargas/jenkins GitHub repo](https://git
 ## Questions
 
 If you have questions, you can ask me on this post as a disqus comment.
+
+Thanks for sharing!
